@@ -22,7 +22,7 @@ namespace Topic_5___Assignemnt_Part_3
 
             points = 0;
             //Question 1
-            
+
             Console.WriteLine("Ok... I'll be nice and give you an easy one to start.");
             Console.WriteLine();
             Console.WriteLine("Question 1:");
@@ -38,7 +38,7 @@ namespace Topic_5___Assignemnt_Part_3
                 Console.WriteLine("That is correct");
                 points = (points + 1);
             }
-                
+
 
             else
                 Console.WriteLine("That is incorrect. The answer we were looking for was: 52");
@@ -71,7 +71,7 @@ namespace Topic_5___Assignemnt_Part_3
                 points -= 1;
             }
             else if (answer2 == "e" || answer2 == "a")
-                Console.WriteLine("Good try, but " + answer2 + "is actually more frequently used" +
+                Console.WriteLine("Good try, but " + answer2 + " is actually more frequently used" +
                     $" than the answer we were looking for which was '{(char)commonLetter}'.");
             else if (answer2 == "i" || answer2 == "o" || answer2 == "t" || answer2 == "n" || answer2 == "s" || answer2 == "l" || answer2 == "c")
             {
@@ -111,10 +111,10 @@ namespace Topic_5___Assignemnt_Part_3
                 Console.WriteLine("WHHAAAAAAA!!!!!!!!! HOW DID YOU GUESS THAT RIGHT????");
                 points += 1;
                 Console.WriteLine("I can't believe it... OK OK.. How about this... " +
-                    "Double or Nothing... It'll be like a 'bonus question'...");
+                    "Let's do a 'bonus question'...");
                 //Bonus Question
                 Console.WriteLine("Alright... Bonus time... Guess the random number between 1 " +
-                    "and 100 for 1000 points, and the chance to win the game...");
+                    "and 101 for 1000 points, and the chance to win the game...");
                 randNum2 = generator.Next(1, 101);
                 int.TryParse(Console.ReadLine(), out bonusAnswer);
                 if (bonusAnswer == randNum2)
@@ -131,9 +131,7 @@ namespace Topic_5___Assignemnt_Part_3
                 else
                 {
                     Console.WriteLine("Unfortunatly that is incorrect...");
-                    Console.WriteLine("The correct answer was " + randNum);
-                    Console.WriteLine("You lose your points because you lost the deal");
-                    points -= 1;
+                    Console.WriteLine("The correct answer was " + randNum2);
                 }
 
 
@@ -169,6 +167,7 @@ namespace Topic_5___Assignemnt_Part_3
                 points += 1;
             Console.WriteLine();
             Console.WriteLine();
+            Console.WriteLine("You have " + points + " point(s).");
             Console.WriteLine("How many points will you wager?");
 
             int.TryParse(Console.ReadLine(), out wager);
@@ -196,7 +195,7 @@ namespace Topic_5___Assignemnt_Part_3
                 points -= wager;
             }
             Console.WriteLine("Congradulations on reaching the end of the quiz!");
-            Console.WriteLine("You finished with " + points + "points");
+            Console.WriteLine("You finished with " + points + " points");
 
             if (points == 2006)
             {
@@ -207,7 +206,7 @@ namespace Topic_5___Assignemnt_Part_3
                 Console.WriteLine("You passed the quiz. Good job.");
             
             else
-                Console.WriteLine("You did not pass the quiz... better luck next time.");
+                Console.WriteLine("You did not win the quiz... better luck next time.");
             Console.ReadLine();
 
 
